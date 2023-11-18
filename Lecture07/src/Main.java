@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        JFrame frame = new EventHandling();
+        JFrame frame = new Microwave();
         frame.setSize(400, 400);
         frame.setTitle("My Window");
         frame.setVisible(true);
