@@ -10,6 +10,7 @@ public class EventHandling extends JFrame {
         this.mainButton = new JButton("Click");
         this.mainButton.addActionListener(new DemoHandler());
         this.mainLabel = new JLabel("Hello!");
+        this.mainLabel.setForeground(Color.RED);
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
         this.add(this.mainButton);
         this.add(this.mainLabel);
