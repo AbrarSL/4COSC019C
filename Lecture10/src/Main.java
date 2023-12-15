@@ -1,6 +1,4 @@
 import java.util.concurrent.FutureTask;
-import java.util.concurrent.ThreadPoolExecutor;
-
 public class Main {
     public static void main(String[] args) throws Exception {
         MyThread t = new MyThread("Thread 1 running!");

@@ -6,17 +6,22 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class ShowImageFrame extends JFrame {
-    private final ImageIcon zeroIcon;
-    private final ImageIcon oneIcon;
-    private final ImageIcon twoIcon;
+    private ImageIcon zeroIcon;
+    private ImageIcon oneIcon;
+    private ImageIcon twoIcon;
     private JLabel imgLabel;
     private JButton oneBtn;
     private JButton twoBtn;
 
     public ShowImageFrame() {
-        this.zeroIcon = new ImageIcon(getClass().getResource("zero.png"));
-        this.oneIcon = new ImageIcon(getClass().getResource("one.png"));
-        this.twoIcon = new ImageIcon(getClass().getResource("two.png"));
+        try {
+            this.zeroIcon = new ImageIcon(getClass().getResource("zero.png"));
+            this.oneIcon = new ImageIcon(getClass().getResource("one.png"));
+            this.twoIcon = new ImageIcon(getClass().getResource("two.png"));
+        } catch (NullPointerException exception) {
+            System.out.println("Image not found!");
+        }
+
         this.imgLabel = new JLabel(this.zeroIcon, JLabel.CENTER);
         this.oneBtn = new JButton("One");
         this.twoBtn = new JButton("Two");
